@@ -58,7 +58,8 @@ var ed_app = new Vue({
     data: {
         consumer: {},
         units: [],
-        battery: {}
+        battery: {},
+        config_data: GLOBAL_CONFIG
     },
     methods: {
         fetchData: function(url, callback) {
@@ -97,12 +98,11 @@ var ed_app = new Vue({
             this.$forceUpdate()
         },
         update: function() {
+            this.mergeData(this.config_data)
             this.fetchData('/dist/data/data.json', this.mergeData)
-            this.fetchData('/dist/data/data_local.json', this.mergeData)
         }
     },
     created: function() {
-        this.update()
         setInterval(this.update(), 60000)
     }
 })
