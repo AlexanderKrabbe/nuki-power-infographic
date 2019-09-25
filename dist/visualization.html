@@ -8,48 +8,49 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-
+        
         <main id="ed-app">
-            <img class="ed-bg" src="https://www.fotoagent.dk/billeder/93346/stor/140_galleri_ilimanaq_restaurant.jpg" alt="">
-            <img class="ed-pointers" src="./img/lines_pointers.svg" alt="">
-            {{ battery }}
-            <consumer :title="consumer.title" :kw="consumer.kw"></consumer>
-            <unit 
-                v-for="u in units" 
-                :title-da="u.title_da" 
-                :title-kl="u.title_kl" 
-                :kw="u.kw" 
-                :link="u.link" 
-                :graphic="u.graphic" 
-                :layout="u.layout" 
-                :key="u.title_da">
-            </unit>
-            <battery
-                :title-da="battery.title_da" 
-                :title-kl="battery.title_kl" 
-                :voltage="battery.voltage" 
-                :charge="battery.charge" 
-                :charging="battery.charging" 
-                :layout="battery.layout" >
-            </battery>
+            <div class="ed-wrapper">
 
-            <!-- Generator 1 arrow -->
-            <!-- <flow-arrow v-if="units[0] && units[0].kw > 0" :layout="['270px','auto','auto','120px','0deg']"></flow-arrow> -->
-            
-            <!-- Generator 2 arrow -->
-            <!-- <flow-arrow v-if="units[1] && units[1].kw > 0" :layout="['530px','auto','auto','150px','270deg']"></flow-arrow> -->
-            
-            <!-- Solar array arrow -->
-            <!-- <flow-arrow v-if="units[2] && units[2].kw > 0" :layout="['265px','auto','auto','400px','180deg']"></flow-arrow> -->
+                <img class="ed-pointers" src="./img/lines_pointers.svg" alt="">
+                <consumer :title="consumer.title" :kw="consumer.kw"></consumer>
+                <unit 
+                    v-for="u in units" 
+                    :title-da="u.title_da" 
+                    :title-kl="u.title_kl" 
+                    :kw="u.kw" 
+                    :link="u.link" 
+                    :graphic="u.graphic" 
+                    :layout="u.layout" 
+                    :key="u.title_da">
+                </unit>
+                <battery
+                    :title-da="battery.title_da" 
+                    :title-kl="battery.title_kl" 
+                    :voltage="battery.voltage" 
+                    :charge="battery.charge" 
+                    :charging="battery.charging" 
+                    :layout="battery.layout" >
+                </battery>
 
-            <!-- Battery 1 arrows -->
-            <flow-arrow v-if="!battery.charging" :layout="['400px','auto','auto','335px','0deg']"></flow-arrow>
-            <flow-arrow v-if="battery.charging" :layout="['400px','auto','auto','335px','180deg']"></flow-arrow>
-            
-            <!-- Battery 2 arrows -->
-            <flow-arrow v-if="!battery.charging" :layout="['560px','auto','auto','390px','180deg']"></flow-arrow>
-            <flow-arrow v-if="battery.charging" :layout="['560px','auto','auto','390px','0deg']"></flow-arrow>
+                <!-- Generator 1 arrow -->
+                <!-- <flow-arrow v-if="units[0] && units[0].kw > 0" :layout="['270px','auto','auto','120px','0deg']"></flow-arrow> -->
+                
+                <!-- Generator 2 arrow -->
+                <!-- <flow-arrow v-if="units[1] && units[1].kw > 0" :layout="['530px','auto','auto','150px','270deg']"></flow-arrow> -->
+                
+                <!-- Solar array arrow -->
+                <!-- <flow-arrow v-if="units[2] && units[2].kw > 0" :layout="['265px','auto','auto','400px','180deg']"></flow-arrow> -->
 
+                <!-- Battery 1 arrows -->
+                <flow-arrow v-if="!battery.charging" :layout="['280px','auto','auto','330px','0deg']"></flow-arrow>
+                <flow-arrow v-if="battery.charging" :layout="['280px','auto','auto','330px','180deg']"></flow-arrow>
+                
+                <!-- Battery 2 arrows -->
+                <flow-arrow v-if="!battery.charging" :layout="['430px','auto','auto','390px','180deg']"></flow-arrow>
+                <flow-arrow v-if="battery.charging" :layout="['430px','auto','auto','390px','0deg']"></flow-arrow>
+            
+            </div>
         </main>
 
         <!-- Configuration -->

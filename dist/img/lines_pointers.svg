@@ -8,35 +8,35 @@
     viewBox="0 0 570 780">
 
     <!-- Arrow to village -->
-    <polyline points="275,230 285,220 295,230"
+    <polyline points="275,240 285,230 295,240"
         style="stroke-linecap:round;fill:none;stroke:white;stroke-width:5" />
 
     <!-- From Generator 1 to village -->
-    <polyline points="95,300 95,270 285,270 285,205"
+    <polyline points="95,260 285,260 285,210"
         style="stroke-linecap:round;fill:none;stroke:white;stroke-width:5" />
     
     <!-- From Generator 2 to village -->
-    <polyline points="150,595 185,595 185,270"
+    <polyline points="140,535 185,535 185,260"
         style="stroke-linecap:round;fill:none;stroke:white;stroke-width:5" />
 
     <!-- From battery 1 to battery 2 -->
-    <polyline points="340,405 380,405 380,600 500,600"
+    <polyline points="340,375 380,375 380,535 500,535"
         style="stroke-linecap:round;fill:none;stroke:white;stroke-width:5" />
 
     <!-- From Solar array to village -->
-    <polyline points="475,320 475,270 258,270"
+    <polyline points="475,260 258,260"
         style="stroke-linecap:round;fill:none;stroke:white;stroke-width:5" />
 
     <!-- From batteries to village -->
-    <polyline points="380,405 380,270"
+    <polyline points="380,405 380,260"
         style="stroke-linecap:round;fill:none;stroke:white;stroke-width:5" />
 
     <!-- From charge status to battery 1 -->
-    <polyline points="285,583 285,405"
+    <polyline points="285,567 285,405"
         style="stroke-linecap:round;fill:none;stroke:white;stroke-width:5;opacity:0.25" />
 
     <!-- From charge status to battery 2 -->
-    <polyline points="285,628 285,740 380,740 380,620 500,620"
+    <polyline points="285,620 285,740 380,740 380,555 500,555"
         style="stroke-linecap:round;fill:none;stroke:white;stroke-width:5;opacity:0.25" />
 
 </svg>
