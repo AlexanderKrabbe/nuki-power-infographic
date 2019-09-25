@@ -97,8 +97,8 @@ var ed_app = new Vue({
             this.$forceUpdate()
         },
         update: function() {
-            this.fetchData('../data/data.json', this.mergeData)
-            this.fetchData('../data/data_local.json', this.mergeData)
+            this.fetchData('/dist/data/data.json', this.mergeData)
+            this.fetchData('/dist/data/data_local.json', this.mergeData)
         }
     },
     created: function() {
