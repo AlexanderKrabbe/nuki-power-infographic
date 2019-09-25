@@ -1,0 +1,239 @@
+/*
+
+    ------
+    COLORS
+    ------
+
+    nuki blue: rgb(0,85,159) hsl(208,100%,31%) #00559f
+    nuki red: rgb(183,1,50) hsl(344,99%,36%) #b70131
+
+    light blue #e6f1f7
+    dark blue #00305D
+
+*/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}
+
+#ed-app {
+    width: 36rem;
+    height: 49rem;
+    position: relative;
+    font: 1em/1.3 sans-serif;
+    color: #00305D;
+    background-color: #00305D;
+}
+
+#ed-app * {
+    box-sizing: border-box;
+}
+
+.ed-dest {
+    position: absolute;
+    z-index: 3;
+    top: 3rem;
+    left: 18rem;
+    width: 10rem;
+    height: 10rem;
+    margin-left: -5rem;
+    padding: 2.75rem 0;
+    color: #fff;
+    background-color: hsla(208,100%,31%,.66);
+    border: solid .33rem #fff;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.ed-dest-title,
+.ed-dest-output {
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.ed-dest-title {
+    color: hsl(208,100%,91%);
+    font-weight: normal;
+}
+.ed-dest-output {
+    font-size: 1.5rem !important;
+}
+
+.ed-bg {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.ed-pointers {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.ed-unit {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    right: auto;
+    z-index: 3;
+    width: 12rem;
+    height: 14rem;
+    overflow: hidden;
+    text-decoration: none;
+    color: hsl(208,100%,81%);
+    font-size: .9rem;
+    transition: all .3s;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+}
+
+.ed-battery {
+    height: 10rem;
+}
+
+a.ed-unit:hover,
+a.ed-unit:focus,
+a.ed-unit:active {
+    bottom: .5rem;
+    background-color: hsla(208,100%,31%,.5);
+}
+
+.ed-title {
+    margin: 0;
+    padding: 0;
+}
+
+.ed-title-kl,
+.ed-title-da {
+    display: block;
+}
+
+.ed-title-da {
+    color: #fff;
+}
+
+.ed-img {
+    width: 8rem;
+    height: 8rem;
+    display: inline-block;
+    clip-path: circle(4rem);
+    margin: 0 0 .5rem;
+}
+
+.ed-output {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.ed-flow-arrow {
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1; 
+    opacity: 0;
+    position: absolute;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+    z-index: 4;
+    height: 3rem;
+    width: 3rem;
+    animation-name: flow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    padding-left: 0px;
+    padding-right: 20px;
+}
+
+@keyframes flow {
+    0%   {opacity: 0; padding-left: 0px; padding-right: 20px;}
+    50%  {opacity: 1; padding-left: 10px; padding-right: 10px;}
+    100% {opacity: 0; padding-left: 20px; padding-right: 0px;}
+}
+
+.ed-charge {
+    display: inline-block;
+    border: solid 3px #fff;
+    position: relative;
+    height: 3rem;
+    width: 8rem;
+    border-radius: .25rem;
+    margin: 0 0 1rem;
+    text-align: left;
+}
+
+.ed-charge::after {
+    content: '';
+    border: solid 3px #fff;
+    border-width: 3px 3px 3px 0;
+    display: block;
+    position: absolute;
+    width: .5rem;
+    height: 1.75rem;
+    right: -.75rem;
+    top: .25rem;
+    background-color: transparent;
+    border-radius: 0 .25rem .25rem 0;
+}
+
+.charge {
+    opacity: 1;
+    display: inline-block;
+    width: 0%;
+    height: 100%;
+    background-color: hsl(150,99%,36%);
+    animation-name: charge;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+}
+
+.discharging .charge {
+    background-color: hsl(344,99%,36%);
+    animation-name: discharge;
+}
+
+@keyframes charge {
+    0%   {width: 0;}
+    19%  {width: 0;}
+    20%  {width: 25%;}
+    39%  {width: 25%;}
+    40%  {width: 50%;}
+    59%  {width: 50%;}
+    60%  {width: 75%;}
+    79%  {width: 75%;}
+    80%  {width: 100%;}
+    100% {width: 100%;}
+}
+
+@keyframes discharge {
+    0%   {width: 100%;}
+    19%  {width: 100%;}
+    20%  {width: 75%;}
+    39%  {width: 75%;}
+    40%  {width: 50%;}
+    59%  {width: 50%;}
+    60%  {width: 25%;}
+    79%  {width: 25%;}
+    80%  {width: 0;}
+    100% {width: 0;}
+}

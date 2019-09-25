@@ -1,0 +1,40 @@
+{
+    "units": [ 
+        { 
+            "title_da": "Diesel-generator 1",
+            "title_kl": "Diesel-generator 1 på grønlandsk",
+            "kw": 20
+        },
+        {
+            "title_da": "Diesel-generator 2",
+            "title_kl": "[Diesel-generator 2 på grønlandsk]",
+            "kw": 18.5
+        },
+        {
+            "title_da": "Solceller",
+            "title_kl": "[Solceller på grønlandsk]",
+            "kw": 4.2
+        },
+        {
+            "title_da": "Batteri 1",
+            "title_kl": "[Batteri 1 på grønlandsk]",
+            "kw": 18
+        },
+        {
+            "title_da": "Batteri 2",
+            "title_kl": "[Batteri 2 på grønlandsk]",
+            "kw": 17.1
+        }
+    ],
+    "consumer": {
+        "title": "Igaliku",
+        "kw": 33.6
+    },
+    "battery": {
+        "title_da": "Batteribank",
+        "title_kl": "[Batteribank på grønlandsk]",
+        "voltage": 723.4,
+        "charge": 38.8,
+        "is_charging": true
+    }
+}
