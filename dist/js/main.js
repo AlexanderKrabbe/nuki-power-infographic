@@ -99,7 +99,7 @@ var ed_app = new Vue({
         },
         update: function() {
             this.mergeData(this.config_data)
-            this.fetchData(this.config_data.base_url + 'data.json', this.mergeData)
+            this.fetchData(this.config_data.base_url + 'data/data.json', this.mergeData)
         }
     },
     created: function() {

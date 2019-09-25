@@ -3,7 +3,7 @@
  */
 
 var GLOBAL_CONFIG = {
-    base_url: '/dist/data/',
+    base_url: './',
     units: [ 
         { 
             link: "http://www.google.dk",
