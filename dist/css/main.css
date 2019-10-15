@@ -47,7 +47,7 @@ body {
     height: 44rem;
     position: absolute;
     z-index: 1;
-    top: 0;
+    top: 2rem;
     left: 50%;
     margin-left: -18rem;
 }
