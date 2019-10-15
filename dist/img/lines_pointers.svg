@@ -19,24 +19,12 @@
     <polyline points="140,535 185,535 185,260"
         style="stroke-linecap:round;fill:none;stroke:white;stroke-width:5" />
 
-    <!-- From battery 1 to battery 2 -->
-    <polyline points="340,375 380,375 380,535 500,535"
-        style="stroke-linecap:round;fill:none;stroke:white;stroke-width:5" />
-
     <!-- From Solar array to village -->
     <polyline points="475,260 258,260"
         style="stroke-linecap:round;fill:none;stroke:white;stroke-width:5" />
 
     <!-- From batteries to village -->
-    <polyline points="380,405 380,260"
+    <polyline points="380,260 380,535 425,535"
         style="stroke-linecap:round;fill:none;stroke:white;stroke-width:5" />
-
-    <!-- From charge status to battery 1 -->
-    <polyline points="285,567 285,405"
-        style="stroke-linecap:round;fill:none;stroke:white;stroke-width:5;opacity:0.25" />
-
-    <!-- From charge status to battery 2 -->
-    <polyline points="285,620 285,740 380,740 380,555 500,555"
-        style="stroke-linecap:round;fill:none;stroke:white;stroke-width:5;opacity:0.25" />
 
 </svg>

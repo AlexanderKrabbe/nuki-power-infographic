@@ -32,23 +32,10 @@
                     :charging="battery.charging" 
                     :layout="battery.layout" >
                 </battery>
-
-                <!-- Generator 1 arrow -->
-                <!-- <flow-arrow v-if="units[0] && units[0].kw > 0" :layout="['270px','auto','auto','120px','0deg']"></flow-arrow> -->
                 
-                <!-- Generator 2 arrow -->
-                <!-- <flow-arrow v-if="units[1] && units[1].kw > 0" :layout="['530px','auto','auto','150px','270deg']"></flow-arrow> -->
-                
-                <!-- Solar array arrow -->
-                <!-- <flow-arrow v-if="units[2] && units[2].kw > 0" :layout="['265px','auto','auto','400px','180deg']"></flow-arrow> -->
-
-                <!-- Battery 1 arrows -->
-                <flow-arrow v-if="!battery.charging" :layout="['280px','auto','auto','330px','0deg']"></flow-arrow>
-                <flow-arrow v-if="battery.charging" :layout="['280px','auto','auto','330px','180deg']"></flow-arrow>
-                
-                <!-- Battery 2 arrows -->
-                <flow-arrow v-if="!battery.charging" :layout="['430px','auto','auto','390px','180deg']"></flow-arrow>
-                <flow-arrow v-if="battery.charging" :layout="['430px','auto','auto','390px','0deg']"></flow-arrow>
+                <!-- Battery Bank arrows -->
+                <flow-arrow v-if="!battery.charging" :layout="['420px','auto','auto','390px','180deg']"></flow-arrow>
+                <flow-arrow v-if="battery.charging" :layout="['420px','auto','auto','390px','0deg']"></flow-arrow>
             
             </div>
         </main>
